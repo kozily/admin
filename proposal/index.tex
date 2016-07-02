@@ -1,0 +1,91 @@
+\documentclass[a4paper,11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paquetes utilizados
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Soporte para el lenguaje español
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% Graficos
+\usepackage{graphicx}
+
+% Encabezados y pies de pagina
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{(75.99) Trabajo Profesional}
+\rhead{Plan de Proyecto}
+\cfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Titulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+\center
+
+\textsc{\LARGE Universidad de Buenos Aires}\\[0.5cm]
+\textsc{\Large Facultad de Ingeniería}\\[1.5cm]
+
+\includegraphics[scale=0.5]{assets/logo.png}\\[1cm]
+
+
+\textsc{\large (75.99) Trabajo Profesional}\\[0.25cm]
+\HRule \\[0.4cm]
+{\huge \bfseries Kozily}
+\HRule \\[0.4cm]
+
+{\large Propuesta de Proyecto}
+
+\begin{bottompar}
+\flushleft
+{\bfseries Autores:}
+
+Arana, Andrés          - P. 86.203
+
+Piano, Sergio          - P. 85.191
+\end{bottompar}
+
+\end{titlepage}
+
+% ----------------------------------------------------------------------
+% Tabla de contenidos
+% ----------------------------------------------------------------------
+\tableofcontents
+\clearpage
+
+% ----------------------------------------------------------------------
+% Documento
+% ----------------------------------------------------------------------
+\section{Autores}
+
+\section{Tutor}
+
+\section{Objetivo}
+
+\section{Alcance}
+
+\section{Herramientas de desarrollo}
+
+\section{Metodología}
+
+\section{Cronograma}
+
+\section{Curriculum Vitae}
+
+\section{Plan de cursada}
+
+\end{document}
+
