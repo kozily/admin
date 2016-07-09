@@ -31,49 +31,161 @@
 
 \begin{titlepage}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+  \newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
 
-\center
+  \center
 
-\textsc{\LARGE Universidad de Buenos Aires}\\[0.5cm]
-\textsc{\Large Facultad de Ingeniería}\\[1.5cm]
+  \textsc{\LARGE Universidad de Buenos Aires}\\[0.5cm]
+  \textsc{\Large Facultad de Ingeniería}\\[1.5cm]
 
-\includegraphics[scale=0.5]{assets/logo.png}\\[1cm]
+  \includegraphics[scale=0.5]{assets/logo.png}\\[1cm]
 
 
-\textsc{\large (75.99) Trabajo Profesional}\\[0.25cm]
-\HRule \\[0.4cm]
-{\huge \bfseries Kozily}
-\HRule \\[0.4cm]
+  \textsc{\large (75.99) Trabajo Profesional}\\[0.25cm]
+  {\huge \bfseries Propuesta de Proyecto} \\[0.4cm]
+  \HRule \\[0.4cm]
+  {\huge \bfseries Kozily} \\[0.4cm]
+  Un entorno de desarrollo de Oz para estudiantes
+  \HRule
 
-{\large Propuesta de Proyecto}
+  \begin{bottompar}
+    \begin{minipage}[t]{.45\linewidth}
+      \begin{flushleft}
+        {\bfseries Autores:}
 
-\begin{bottompar}
-\flushleft
-{\bfseries Autores:}
+        Arana, Andrés          - P. 86.203
 
-Arana, Andrés          - P. 86.203
+        Piano, Sergio          - P. 85.191
+      \end{flushleft}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.45\linewidth}
+      \begin{flushright}
+        {\bfseries Tutor:}
 
-Piano, Sergio          - P. 85.191
-\end{bottompar}
+        Rosita Wachenchauzer
+      \end{flushright}
+    \end{minipage}
+  \end{bottompar}
 
 \end{titlepage}
 
 % ----------------------------------------------------------------------
-% Tabla de contenidos
+% Documento
 % ----------------------------------------------------------------------
+\begin{abstract}
+
+  El presente documento constituye una propuesta de proyecto enmarcado en el
+  contexto de un trabajo profesional para la carrera de Ingeniería en
+  Informática en la Facultad de Ingeniería de la Universidad de Buenos Aires.
+  Se propone desarrollar un entorno de desarrollo para el lenguaje de
+  programación Oz orientado a apoyar el aprendizaje de los diferentes
+  paradigmas que soporta el mismo, y que constituye su principal caso de uso.
+
+\end{abstract}
+\clearpage
+
 \tableofcontents
 \clearpage
 
-% ----------------------------------------------------------------------
-% Documento
-% ----------------------------------------------------------------------
-\section{Autores}
-
-\section{Tutor}
-
 \section{Objetivo}
+
+\subsection{Introducción}
+
+Oz es un lenguaje multiparadigma diseñado por Gert Smolka en la Université
+Catholique de Louvain en 1991, específicamente pensado para enseñar conceptos
+de programación a alumnos universitarios. Fue desarrollado posteriormente en
+1996 por Peter Van Roy y Seif Haridi de Swedish Institute of Computer Science
+en conjunto con un manual de estudio canónico: Concepts, Techniques and Models
+of Computer Programming. Finalmente, en 2005 se constituyó una entidad propia,
+The Mozart Board, para coordinar los esfuerzos de desarrollo del lenguaje, su
+especificación y entorno de ejecución.
+
+Si bien la visión fundacional de The Mozart Board es ampliar el espectro de
+aplicabilidad del lenguaje, en la actualidad la mayoría de los casos de uso del
+mismo se nucléan alrededor de la idea original que sustenta su diseño: como
+herramienta para enseñar a alumnos universitarios diversos conceptos, técnicas
+y modelos de programación. 
+
+En Argentina, tanto la Facultad de Ingeniería de la Universidad de Buenos Aires
+cómo algunas universidades tecnológicas de Córdoba enmarcan la enseñanza de
+paradigmas y lenguajes de programación en el enfoque de Concepts, Techniques
+and Models of Computer Programming, y por consiguiente, usando Oz como lenguaje
+de estudio.
+
+\subsection{Concepts, Techniques and Models of Computer Programming}
+
+El manual de referencia de Peter Van Roy enmarca una metodología incremental de
+enseñanza de los diferentes paradigmas, conceptos y técnicas de programación.
+En el mismo, el autor desarrolla un marco teórico de ejecución, la
+\emph{máquina abstracta de ejecución}, un sistema matemático abstracto que
+define la ejecución de un programa en base a un conjunto minimalista de
+conceptos: un stack de ejecución con diferentes instrucciones, un entorno de
+ejecución que asigna identificadores a celdas de memoria y una memoria que
+almacena valores en celdas. Las diferentes técnicas, conceptos y modelos que
+son examinados a lo largo del libro se definen en base a los efectos de las
+instrucciones constituyentes sobre la máquina abstracta, de acuerdo a la
+semántica operacional que se define iterativamente en cada capítulo.
+
+Este enfoque es sumamente efectivo dado que le permite al alumno comprender el
+mecanismo de abstracción que fundamenta el aprendizaje de la programación: el
+lenguaje de programación es una interfase con una máquina subyacente, y su
+diseño está a su vez estratificado en niveles de abstracción sobre una
+semántica base (procedimientos, funciones, functores, objetos y otros). Aún
+más, este conocimiento es entendido sin necesidad de comprender la operativa
+física de la máquina subyacente real, lo que requiere contar con experiencia en
+ciencias básicas (física, química) y aplicadas (electrónica).
+
+Por último, Oz expone una variedad de paradigmas que permite al docente diseñar
+un currículo que incorpore conceptos básicos en cada uno de ellos. Esto es
+especialmente importante hoy en día, donde las arquitecturas basadas en
+microservicios buscan explotar la separación de los componentes de un sistema
+informático en microsistemas desarrollados con diferentes lenguajes de
+programación de manera de aplicar paradigmas y técnicas más efectivas en cada
+dominio.
+
+\subsection{Herramientas existentes}
+
+Actualmente existe un único entorno de desarrollo, administrado y mantenido por
+The Mozart Board. El entorno es extremadamente completo, pero tiene una gran
+debilidad: debido a que la misión fundacional de The Mozart Board es expandir
+el campo de aplicabilidad del lenguaje Oz más allá del nicho de la enseñanza,
+suele ser complejo para ser abordado por alguien que recién se está iniciando
+en el campo de la programación.
+
+En particular, podemos destacar las siguientes dificultades asociadas al uso de
+este entorno en el marco educativo:
+
+\begin{enumerate}
+
+\item El sistema está basado en GNU Emacs. Si bien este constituye un excelente
+  entorno de desarrollo en general, tiene una curva de aprendizaje desfavorable y
+  requiere una inversión de tiempo considerable para poder operarlo.
+
+\item Muchos de los conceptos subyacentes a la máquina de ejecución abstracta
+  están escondidos dentro del entorno de ejecución, y el entorno de desarrollo
+  no provee herramientas para acceder a esta información.
+
+\item El sistema es una aplicación binaria de escritorio, lo que significa que
+  requiere un proceso de instalación que constituye nuevamente una barrera
+  adicional para el neófito, sobre todo si se tiene en cuenta que no existen
+  paquetes binarios actualizados para las diferentes plataformas que puede
+  tener el alumno.
+
+\item El sistema no puede ser ejecutado sobre un dispositivo móvil, por lo que
+  requiere que el alumno cuente con una computadora para poder ejecutar,
+  evaluar e interactuar con el software, cuando a priori podría utilizar
+  cualquiera de los dispositivos móviles que suelen estar más al alcance de la
+  mano.
+
+\end{enumerate}
+
+\subsection{Propuesta}
+
+En base a lo descripto anteriormente, se propone implementar un nuevo entorno
+de desarrollo cuya misión sea facilitar la comprensión de las características
+operativas del entorno de ejecución de Oz.
 
 \section{Alcance}
 
