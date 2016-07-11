@@ -9,6 +9,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
 
+% Configuración de página
+\usepackage[lmargin=1in, rmargin=1in]{geometry}
+
 % Graficos
 \usepackage{graphicx}
 
@@ -17,9 +20,12 @@
 \setlength{\headheight}{15.2pt}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{(75.99) Trabajo Profesional}
-\rhead{Plan de Proyecto}
+\lhead{Kozily}
+\rhead{Propuesta de Proyecto}
 \cfoot{\thepage}
+
+% Tablas
+\usepackage{longtable}
 
 \begin{document}
 
@@ -159,25 +165,25 @@ este entorno en el marco educativo:
 
 \begin{enumerate}
 
-\item El sistema está basado en GNU Emacs. Si bien este constituye un excelente
-  entorno de desarrollo en general, tiene una curva de aprendizaje desfavorable y
-  requiere una inversión de tiempo considerable para poder operarlo.
+  \item El sistema está basado en GNU Emacs. Si bien este constituye un excelente
+    entorno de desarrollo en general, tiene una curva de aprendizaje desfavorable y
+    requiere una inversión de tiempo considerable para poder operarlo.
 
-\item Muchos de los conceptos subyacentes a la máquina de ejecución abstracta
-  están escondidos dentro del entorno de ejecución, y el entorno de desarrollo
-  no provee herramientas para acceder a esta información.
+  \item Muchos de los conceptos subyacentes a la máquina de ejecución abstracta
+    están escondidos dentro del entorno de ejecución, y el entorno de desarrollo
+    no provee herramientas para acceder a esta información.
 
-\item El sistema es una aplicación binaria de escritorio, lo que significa que
-  requiere un proceso de instalación que constituye nuevamente una barrera
-  adicional para el neófito, sobre todo si se tiene en cuenta que no existen
-  paquetes binarios actualizados para las diferentes plataformas que puede
-  tener el alumno.
+  \item El sistema es una aplicación binaria de escritorio, lo que significa que
+    requiere un proceso de instalación que constituye nuevamente una barrera
+    adicional para el neófito, sobre todo si se tiene en cuenta que no existen
+    paquetes binarios actualizados para las diferentes plataformas que puede
+    tener el alumno.
 
-\item El sistema no puede ser ejecutado sobre un dispositivo móvil, por lo que
-  requiere que el alumno cuente con una computadora para poder ejecutar,
-  evaluar e interactuar con el software, cuando a priori podría utilizar
-  cualquiera de los dispositivos móviles que suelen estar más al alcance de la
-  mano.
+  \item El sistema no puede ser ejecutado sobre un dispositivo móvil, por lo que
+    requiere que el alumno cuente con una computadora para poder ejecutar,
+    evaluar e interactuar con el software, cuando a priori podría utilizar
+    cualquiera de los dispositivos móviles que suelen estar más al alcance de la
+    mano.
 
 \end{enumerate}
 
@@ -186,6 +192,10 @@ este entorno en el marco educativo:
 En base a lo descripto anteriormente, se propone implementar un nuevo entorno
 de desarrollo cuya misión sea facilitar la comprensión de las características
 operativas del entorno de ejecución de Oz.
+
+\subsection{Requerimientos funcionales}
+
+\subsection{Requerimientos no funcionales}
 
 \section{Alcance}
 
@@ -196,6 +206,234 @@ operativas del entorno de ejecución de Oz.
 \section{Cronograma}
 
 \section{Curriculum Vitae}
+
+\subsection{Andrés Gastón Arana}
+
+\subsubsection{Datos personales}
+
+\noindent \begin{tabular}{l l l l}
+  \textbf{Nombre} & Andrés Gastón Arana & \textbf{Teléfono} & +54 9 11 3162-7877\\
+  \textbf{Padrón} & 86.203              & \textbf{Email}    & and2arana@gmail.com \\
+\end{tabular}
+
+\subsubsection{Educación}
+
+\noindent \textbf{Ingeniería en Informática}
+
+\noindent\emph{2004 - Actual}
+
+\noindent Cursando Ingeniería en Informática en la Facultad de Ingeniería de la
+Universidad de Buenos Aires. \\
+
+\noindent \textbf{Polimodal con orientación en adm. y gestión de empresas}
+
+\noindent\emph{2000 - 2003}
+
+\noindent Bachiller con orientación en adm. y gestión de empresas en el colegio
+Mariano Moreno.
+
+\subsubsection{Experiencia laboral}
+
+\noindent \textbf{Socio fundador en Recompensa.mobi}
+
+\noindent \emph{2014 - Actual}
+
+\noindent Participo actualmente en el desarrollo, comercialización e
+implementación de una plataforma de registro de eventos asociados con los
+procesos de ventas y customer service en PyMes. Desarrollo diversos roles,
+principalmente relacionados al relevamiento de requerimientos, diseño,
+conceptualización de arquitectura e implementación. \\
+
+\noindent \textbf{Desarrollador en Global Fishing Watch}
+
+\noindent \emph{2015 - Actual}
+
+\noindent Desempeño tareas de consultoría como desarrollador en Global Fishing
+Watch, una ONG que realiza monitoreo satelital de barcos de pesca. Involucrado
+en el procesamiento de eventos AIS para detectar patrones de pesca, que incluye
+técnicas probabilísticas, heurísticas y de machine learning aplicados a
+100.000.000 de registros por día, así como también infraestructura de
+visualización de la información generada. \\
+
+\noindent \textbf{Líder técnico en Asante}
+
+\noindent \emph{2011 - 2014}
+
+\noindent Tareas de líder técnico para diversos proyectos en Asante. Trabajé
+principalmente coordinando un equipo de 5 desarrolladores y realizando tareas
+de desarrollo para varios proyectos que involucraban la generación de
+aplicaciones para dispositivos móviles Android, iOS y web nativo, incluyendo un
+backend administrativo en Ruby. \\
+
+\noindent \textbf{Líder técnico en PlayPhone}
+
+\noindent \emph{2011 - 2011}
+
+\noindent Desarrollé tareas de líder técnico en PlayPhone, trabajando
+principalmente en la coordinación e implementación de sistemas de backend de
+una plataforma de servicios para aplicaciones móviles como autorización,
+gestión de pagos y microtransacciones en .NET. \\
+
+\noindent \textbf{Desarrollador en LeaseTrader}
+
+\noindent \emph{2010 - 2011}
+
+\noindent Tareas de desarrollo bajo la plataforma .NET para un sitio de
+compra-venta de leases de autos en estados unidos, incluyendo principalmente el
+desarrollo y testing de nuevos features, así como el diseño, arquitectura e
+implementación de nuevas plataformas de soporte de la compañía. \\
+
+\noindent \textbf{Desarrollador en Sabarasa Entertainment}
+
+\noindent \emph{2009 - 2010}
+
+\noindent Desarrollo de videojuegos para consolas Wii en lenguajes de bajo
+nivel, principalmente C++, incluyendo tareas de modelado matemático y
+optimización de bajo nivel para la plataforma, incluyendo sistemas de
+procesamiento en tiempo real de entrada y subsistemas gráficos. \\
+
+\noindent \textbf{Desarrollador en Globant}
+
+\noindent \emph{2008 - 2009}
+
+\noindent Tareas de desarrollo en múltiples clientes, pero principalmente en un
+proyecto de modernización para una plataforma de servicios y distribución de
+contenido en sistemas móviles que incluía la reingeniería de un sistema de
+facturación y autorización en un stack JVM, Spring y JBoss. \\
+
+\noindent \textbf{Desarrollador en EDS}
+
+\noindent \emph{2007 - 2008}
+
+\noindent Tareas de desarrollo en un equipo chico a cargo de la modernización
+de la infraestructura de procesamiento de aprobación de créditos para la compra
+de autos en GMAC. El proyecto consistía en la migración de una infraestructura
+de más de 10 años desarrollada en C++ a una plataforma .NET. \\
+
+\noindent \textbf{Desarrollador en LanTec IT}
+
+\noindent \emph{2007 - 2008}
+
+\noindent Tareas de desarrollo en el proyecto de QuickPass, un emprendimiento de procesamiento biométrico para control de acceso y registro de horas laborales. Componentes desarrollados en C++ para interactuar con el hardware, y en .NET para el resto de las aplicaciones. Desempeñé también tareas de electrónica para construir dispositivos de toma de huellas dactilares en base a componentes importados. \\
+
+\noindent \textbf{Desarrollador en Sistemas Bejerman}
+
+\noindent \emph{2004 - 2007}
+
+\noindent Tareas de desarrollo los módulos de contabilidad, balances, recursos
+humanos y sueldos y jornales del ERP que constituía el producto principal de la
+empresa, una plataforma .NET. Adicionalmente codificaba los instaladores del
+sistema, bajo la tecnología de instalación MSI, con binarios precompilados en
+Delphi. \\
+
+\subsubsection{Habilidades}
+
+\begin{enumerate}
+
+  \item Experiencia en trabajo en equipos de desarrollo bajo diversas
+    metodologías, tanto ágiles (Kanban, Scrum) como tradicionales.
+
+  \item Experiencia en trabajo bajo condiciones de continuous integration y
+    continuous delivery.
+
+  \item Conocimiento avanzado en diversos lenguajes de programación. C++,
+    Java, C\#, F\#, Ruby, Python, Clojure, LISP, Haskell y Javascript.
+
+  \item Extensiva experiencia laboral en sistemas distribuídos web, incluyendo
+    arquitecturas REST, microservicios sobre HTTP y aplicaciones web.
+
+  \item Experiencia laboral en desarrollo de clientes progresivos sobre
+    exploradores móviles y de escritorio, con aplicación de tecnologías como
+    HTML5, CSS3, responsive design, progressive enhancement, service workers y
+    offline first clients.
+
+  \item Experiencia laboral sobre plataformas y librerías de desarrollo para
+    cada entorno, como ser Spring, JUnit, JMock, JBoss para plataformas Java,
+    Rails, RSpec, Cucumber para plataformas Ruby, Django para python, Compojure y Ring para
+    Clojure, etc..
+
+  \item Experiencia laboral sobre data modeling y data stores, tanto SQL
+    (MySQL, Oracle, MSSQL, Postgresql) como noSQL (MongoDB, Google Cloud
+    Datastore, Redis).
+
+  \item Experiencia laboral sobre BigData y las tecnologías relacionadas, como
+    Spark, Hadoop y Kafka. Incluye aplicación de técnicas de análisis
+    heurísticos, probabilísticos y de machine learning (modelos bayesianos y
+    redes neuronales).
+
+  \item Experiencia laboral en diversas plataformas de cloud computing, como
+    AWS y Google Cloud Platform. Entornos virtualizados y en base a
+      contenedores (Docker) con coordinadores como Kubernetes.
+
+\end{enumerate}
+
+\subsubsection{Idiomas}
+
+\begin{enumerate}
+
+  \item Español nativo.
+
+  \item Inglés avanzado. Nivel B en CAE, A en FCE.
+
+  \item Francés principiante. Sin certificación avalada.
+
+\end{enumerate}
+
+\subsubsection{Materias aprobadas}
+
+\begin{longtable}{|l|l|r|l|}
+  \hline
+  Materia                                       & Fecha      & Nota & Acta              \\
+  \hline
+  \endhead
+
+  \hline
+  \multicolumn{4}{r}{\textit{Continua en la próxima página}} \\
+  \endfoot
+
+  \hline
+  \endlastfoot
+
+  (6201) Fisica I A                          & 26/07/2005 & 6  & 2-104-20          \\
+  (7540) Algoritmos Y Programacion I         & 20/12/2005 & 7  & 17-93-191         \\
+  (6108) Algebra II A                        & 21/12/2005 & 5  & 1-150-126         \\
+  (6103) Analisis Matematico II A            & 25/07/2006 & 4  & 1-151-98          \\
+  (7541) Algoritmos Y Programacion II        & 14/08/2006 & 8  & 17-95-50          \\
+  (6301) Quimica                             & 17/08/2006 & 6  & 3-73-44           \\
+  (7507) Algoritmos Y Programacion III       & 14/12/2006 & 8  & 17-95-126         \\
+  (6203) Fisica II A                         & 21/02/2008 & 7  & 2-106-76          \\
+  (6670) Estructura Del Computador           & 12/08/2008 & 6  & 6-136-98          \\
+  (7512) Analisis Numerico I                 & 28/12/2009 & 5  & 17-102-191        \\
+  (7506) Organizacion De Datos               & 21/02/2011 & 8  & 17-106-24         \\
+  (7542) Taller De Programacion I            & 01/03/2011 & 9  & 17-106-69         \\
+  (6109) Probabilidad Y Estadistica B        & 21/07/2011 & 5  & 1-159-64          \\
+  (6602) Laboratorio                         & 11/08/2011 & 8  & 6-141-34          \\
+  (7508) Sistemas Operativos                 & 22/12/2011 & 9  & 17-108-99         \\
+  (7112) Estructura De Las Organizaciones    & 08/02/2012 & 7  & 11-153-160        \\
+  (7509) Analisis De La Informacion          & 07/08/2012 & 6  & 17-110-1          \\
+  (6110) Análisis Matemático III A           & 09/08/2012 & 6  & 1-157-164         \\
+  (7114) Modelos Y Optimizacion I            & 12/12/2012 & 8  & 11-155-28         \\
+  (6620) Organizacion De Computadoras        & 04/02/2013 & 7  & 6-143-56          \\
+  (7514) Lenguajes Formales                  & 25/02/2013 & 9  & 17-111-129        \\
+  (7113) Informacion En Las Organizaciones   & 16/07/2013 & 4  & 71-0001053        \\
+  (7526) Simulacion                          & 31/07/2013 & 7  & 95-0001278        \\
+  (7510) Tecnicas De Diseño                  & 05/08/2013 & 7  & 95-0001318        \\
+  (7545) Taller De Desarrollo De Proyectos I & 12/12/2013 & 8  & 95-0001636        \\
+  (7515) Base De Datos                       & 26/02/2014 & 5  & 95-0001833        \\
+  (6671) Sistemas Gráficos                   & 18/07/2014 & 6  & 86-0001914        \\
+  (7552) Taller De Programacion II           & 08/08/2014 & 5  & 95-0002323        \\
+  (7559) Tecnicas De Prog. Concurrente I     & 12/12/2014 & 7  & 95-0002481        \\
+  (7544) Adm. Y Control De Proy. Inf. I      & 16/12/2014 & 4  & 95-0002510        \\
+  (7547) Taller De Desarrollo De Proy. II    & 29/06/2015 & 8  & 95-0002895        \\
+  (7140) Leg. Y Ej. Prof. De La Ing. En Inf. & 30/07/2015 & 5  & 71-0002132        \\
+  (7531) Teoria De Lenguaje                  & 14/12/2015 & 10 & 95-0003624        \\
+  (7550) Introduccion A Los Sist. Int.       & 29/02/2016 & 7  & 95-0003649        \\
+  \hline
+\end{longtable}
+
+\textbf{Promedio académico}: 6,68
+
+\subsection{Sergio Matías Piano}
 
 \section{Plan de cursada}
 
