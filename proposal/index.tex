@@ -11,6 +11,8 @@
 
 % Configuración de página
 \usepackage[lmargin=1in, rmargin=1in]{geometry}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{1em}
 
 % Graficos
 \usepackage{graphicx}
@@ -77,9 +79,13 @@
 
 \end{titlepage}
 
-% ----------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Documento
-% ----------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------------------
+% Abstract
+%-----------------------------------------------------------------------
 \begin{abstract}
 
   El presente documento constituye una propuesta de proyecto enmarcado en el
@@ -92,9 +98,15 @@
 \end{abstract}
 \clearpage
 
+%-----------------------------------------------------------------------
+% Tabla de contenidos
+%-----------------------------------------------------------------------
 \tableofcontents
 \clearpage
 
+%-----------------------------------------------------------------------
+% Objetivo
+%-----------------------------------------------------------------------
 \section{Objetivo}
 
 \subsection{Introducción}
@@ -112,7 +124,7 @@ Si bien la visión fundacional de The Mozart Board es ampliar el espectro de
 aplicabilidad del lenguaje, en la actualidad la mayoría de los casos de uso del
 mismo se nucléan alrededor de la idea original que sustenta su diseño: como
 herramienta para enseñar a alumnos universitarios diversos conceptos, técnicas
-y modelos de programación. 
+y modelos de programación.
 
 En Argentina, tanto la Facultad de Ingeniería de la Universidad de Buenos Aires
 cómo algunas universidades tecnológicas de Córdoba enmarcan la enseñanza de
@@ -193,12 +205,140 @@ En base a lo descripto anteriormente, se propone implementar un nuevo entorno
 de desarrollo cuya misión sea facilitar la comprensión de las características
 operativas del entorno de ejecución de Oz.
 
+%-----------------------------------------------------------------------
+% Alcance
+%-----------------------------------------------------------------------
+\section{Alcance}
+
 \subsection{Requerimientos funcionales}
+
+Los requerimientos funcionales del proyecto se dividen en dos categorías. Por
+un lado, aquellos requerimientos relacionados a la interpretación de
+construcciones sintácticas y semánticas que constituyen los diferentes
+paradigmas soportados por Oz. Por el otro, los asociados a las funcionalidades
+didácticas a través de las que el estudiante interactúa con el entorno de
+ejecución.
+
+\subsubsection{Construcciones semánticas}
+
+El sistema deberá ejecutar correctamente todas las construcciones sintácticas y
+semánticas de los siguientes paradigmas y modelos , de acuerdo a su definición
+en Concepts, Techniques and Models of Computer Programming:
+
+\begin{enumerate}
+
+  \item Modelo declarativo
+
+  \item Técnicas aplicadas del modelo declarativo
+
+  \item Concurrencia declarativa
+
+  \item Concurrencia basada en pasaje de mensajes
+
+  \item Estado explícito
+
+  \item Programación orientada a objetos
+
+  \item Concurrencia de estado compartido
+
+  \item Programación relacional
+
+  \item Programación de restricciones
+
+\end{enumerate}
+
+\subsubsection{Funcionalidades didácticas}
+
+El sistema deberá permitir que el alumno interactúe con el entorno de ejecución
+de las siguientes maneras:
+
+\begin{enumerate}
+
+  \item El sistema deberá permitir al alumno ingresar un programa en un
+    editor de textos embebido.
+
+  \item El sistema deberá marcar con diferentes estilos de fuentes y/o
+    colores las diferentes construcciones sintácticas y semánticas del
+      lenguaje a medida que el alumno ingresa un programa en el editor.
+
+    \item El sistema deberá verificar la sintaxis del programa a medida que el
+      alumno lo ingresa en el editor, reportando cualquier error que detecte.
+
+    \item El sistema deberá ejecutar el programa ingresado, recopilando las
+      expresiones de inspección de tipo \textit{Browse} y mostrando estas
+      salidas recopiladas.
+
+    \item El sistema deberá mostrar la traducción del programa ingresado a
+      lenguaje kernel.
+
+    \item El sistema deberá mostrar los pasos de ejecución del programa
+      ingresado, haciendo explícita la máquina abstracta de ejecución.
+
+\end{enumerate}
+
+\subsubsection{Funcionalidades adicionales}
+
+Las siguientes son funcionalidades adicionales, que constituyen un backlog de
+requerimientos de tipo nice to have, y serán implementados de acuerdo a la
+dinámica iterativa de la planificación:
+
+\begin{enumerate}
+
+  \item El sistema deberá permitir la registración de un alumno a través de
+    proveedores de mecanismos de SSO como Google, Facebook o Github.
+
+  \item El sistema deberá permitir al alumno guardar y cargar los programas
+    que ingrese en el mismo.
+
+  \item El sistema deberá permitir al alumno compartir programas ingresados
+    con otros alumnos, permitiendo a estos cargar programas ingresados.
+
+  \item El sistema deberá permitir que más de un alumno edite un mismo
+    programa al mismo tiempo, de una manera colaborativa.
+
+\end{enumerate}
 
 \subsection{Requerimientos no funcionales}
 
-\section{Alcance}
+\subsubsection{Hardware y software}
 
+El sistema deberá ser distribuído como una aplicación web, y debe poder usarse
+incluso si la conectividad es limitada o nula de acuerdo a los lineamientos de
+una aplicación web progresiva. La aplicación deberá poder ejecutarse en
+cualquier plataforma, tanto móvil como tradicional, en la que pueda ejecutarse
+google chrome.
+
+De acuerdo a los lineamientos de este software, los requerimientos mínimos de
+acuerdo a la plataforma son los siguientes:
+
+\begin{enumerate}
+
+  \item \textbf{Windows} Windows 7 o superior, con un procesador Intel Pentium
+    4 o superior con soporte de SSE2 y al menos 2GB de memoria RAM.
+
+  \item \textbf{Mac} OS X Maverick 10.9 o superior.
+
+  \item \textbf{Linux} Ubuntu 14.04+, Debian 8+, openSUSE 13.1+ o Fedora Linux
+    21+, con un procesador Intel Pentium 4 o superior con soporte de SSE2 y al
+    menos 2GB de memoria RAM.
+
+  \item \textbf{Telefonos o Tablets Android} Cualquier dispositivo con Android
+    4.1 o superior que soporte la instalación de google chrome.
+
+  \item \textbf{iPhone y iPad} Cualquier dispositivo con iOS9 o superior que
+    soporte la instalación de Google Chrome.
+
+\end{enumerate}
+
+\subsubsection{Idioma}
+
+La aplicación, así como toda la documentación de proyecto y de producto será
+desarrollada enteramente y únicamente en inglés, para fomentar la colaboración
+con las universidades relacionadas con el lenguaje.
+
+%-----------------------------------------------------------------------
+% Herramientas de desarrollo
+%-----------------------------------------------------------------------
 \section{Herramientas de desarrollo}
 
 \subsection{Hardware}
@@ -280,10 +420,19 @@ los browsers que soporten las librerías que vamos a utilizar.\\
 
 \noindent \emph{http://www.vim.org/}
 
+%-----------------------------------------------------------------------
+% Metodología
+%-----------------------------------------------------------------------
 \section{Metodología}
 
+%-----------------------------------------------------------------------
+% Cronograma
+%-----------------------------------------------------------------------
 \section{Cronograma}
 
+%-----------------------------------------------------------------------
+% Curriculum
+%-----------------------------------------------------------------------
 \section{Curriculum Vitae}
 
 \subsection{Andrés Gastón Arana}
@@ -671,11 +820,11 @@ SCM: Git. \\
 \noindent Citibank Benefits es la web de beneficios del banco Citi en la que se
 puede navegar y explorar beneficios para los clientes.  Estuve a cargo,
 principalmente, del desarrollo de una aplicación web que permitiera generar
-nuevos beneficios. 
+nuevos beneficios.
 Participé en el diseño, desarrollo, mantenimiento, análisis de requerimientos
 funcionales y no funcionales y definición de arquitectura.  Lenguajes: Java.
 Tecnologías: Spring, GWT, RestyGWT, Resteasy, GQuery, Lucene, Hibernate, Tomcat.
-SCM: SVN. \\ 
+SCM: SVN. \\
 
 \noindent \textbf{Desarrollador Senior en Citibank – Credit Cards Management
 System, para Teracode}
@@ -688,7 +837,7 @@ distintas oficinas comerciales que hayan establecido un vínculo con el banco
 como para automovilistas que circulan por estaciones de peaje.  Lenguajes:
 Java.
 Tecnologías: Maven, Spring, Hibernate, Wicket, iText, Css, MySQL, Tomcat.
-SCM: SVN. \\ 
+SCM: SVN. \\
 
 \noindent \textbf{Líder de proyecto en Ticket River para Teracode}
 
@@ -754,7 +903,7 @@ pacientes para un rápido acceso por parte de los médicos, como de los
 experimentos llevados a cabo von la aplicación de drogas propias del
 laboratorio. Participé además en el análisis e implementación de los
 requerimientos.  Tecnologías: Jboss, Java, Cocoon, Jaas, Junit, Html, Xml,
-Xslt, Xsd, Xpath, Javascript, Ajax, Ant, Monotone, Sql, Postgresql. \\ 
+Xslt, Xsd, Xpath, Javascript, Ajax, Ant, Monotone, Sql, Postgresql. \\
 
 \noindent \textbf{Desarrollador en Lojack para Novamens}
 
@@ -762,7 +911,7 @@ Xslt, Xsd, Xpath, Javascript, Ajax, Ant, Monotone, Sql, Postgresql. \\
 Trabajé en requerimientos funcionales y en el desarrollo.  Tecnologías: Jetty,
 Java, Cocoon, Jaas, Wicket, Spring, Junit, Web Services, Wsdl, Axis, Html, Xml,
 Xslt, Xsd, Xpath, Javascript, Ajax, Maven, Cvs, Sql, Postgresql, Hibernate. \\
- 
+
 \noindent \textbf{Desarrollador en Asociación Argentina de Consorcios
 Regionales de Experimentación Agrícola - (AACREA), para Novamens}
 
@@ -771,7 +920,7 @@ compartido a todas aquellas personas que estaba involucradas con la agricultura
 a lo largo del país.  Tecnologías: Jetty, Java, Python, Cocoon, Wicket, Spring,
 Jaas, Html, Xml, Xslt, Xsd, Xpath, Javascript, Ajax, Actionscript 2.0, Flash,
 QT Design, Maven, Cvs, Sql, Postgresql. \\
- 
+
 \noindent \textbf{Desarrollador en Aerolíneas Argentinas para Novamens}
 
 \noindent Participé en el desarrollo de una aplicación web que funcionaba como
@@ -879,6 +1028,9 @@ Cvs, Sql, Postgresql. \\
 
 \textbf{Promedio académico}: 6,64
 
+%-----------------------------------------------------------------------
+% Plan de cursada
+%-----------------------------------------------------------------------
 \section{Plan de cursada}
 
 \subsection{Sergio Matías Piano}
