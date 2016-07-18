@@ -1,17 +1,21 @@
 .PHONY: all clean
 
-all: build/proposal.pdf
+all: build/proposal.pdf build/letter.pdf build/act.pdf
 
 clean:
+	@echo "**************************************************"
+	@echo "Cleaning up"
+	@echo "**************************************************"
 	sudo rm -rf build
 
-build/proposal.pdf: build/ build/proposal/index.pdf
-	cp build/proposal/index.pdf build/proposal.pdf
-
-build/proposal/index.pdf: proposal/index.tex build/proposal/
-	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/proposal proposal/index.tex
-	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/proposal proposal/index.tex
-	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/proposal proposal/index.tex
+build/%.pdf: proposal/%.tex build/%/
+	@echo "**************************************************"
+	@echo "Building $*"
+	@echo "**************************************************"
+	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/$* proposal/$*.tex
+	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/$* proposal/$*.tex
+	docker run -it --rm -v $$PWD:/src -w /src kozily/latex pdflatex --output-directory build/$* proposal/$*.tex
+	cp build/$*/$*.pdf build/$*.pdf
 
 build/:
 	mkdir -p $@
