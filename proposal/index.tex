@@ -28,6 +28,8 @@
 
 % Tablas
 \usepackage{longtable}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{document}
 
@@ -453,6 +455,64 @@ de proyecto que será enviado al tutor.
 % Cronograma
 %-----------------------------------------------------------------------
 \section{Cronograma}
+
+Se planifica una carga de trabajo por persona por semana de un mínimo de 15
+horas, con iteraciones de dos semanas e hitos entregables mensuales. Bajo este
+esquema, se detalla a continuación un cronograma de alto nivel del proyecto:
+
+\begin{longtable}{clL{0.5\textwidth}}
+  \hline
+  \textbf{Fecha} & \textbf{Evento} & \textbf{Notas} \\
+  \hline
+  \endhead
+
+  \hline
+  \multicolumn{3}{r}{\textit{Continua en la próxima página}} \\
+  \endfoot
+
+  \hline
+  \endlastfoot
+
+  15/08/2016 - 28/08/2016 & Iteración 1 & 60 horas \\
+
+  \hline 29/08/2016 & Hito 1 & Entregables: Entornos, UI básica, ingreso de código fuente \\ \hline
+
+  29/08/2016 - 11/09/2016 & Iteración 2 & 60 horas \\
+  12/09/2016 - 25/09/2016 & Iteración 3 & 60 horas \\
+
+  \hline 26/09/2016 & Hito 2 & Entregables: Modelo declarativo, marcado de sintaxis, visualización de ejecución \\ \hline
+
+  26/09/2016 - 09/10/2016 & Iteración 4 & 60 horas \\
+  10/10/2016 - 23/10/2016 & Iteración 5 & 60 horas \\
+
+  \hline 24/10/2016 & Hito 3 & Entregables: Técnicas de modelo declarativo, visualización de kernel y máquina abstracta \\ \hline
+
+  24/10/2016 - 06/11/2016 & Iteración 6 & 60 horas \\
+  07/11/2016 - 20/11/2016 & Iteración 7 & 60 horas \\
+
+  \hline 21/11/2016 & Hito 4 & Entregables: Concurrencia declarativa \\ \hline
+
+  21/11/2016 - 04/12/2016 & Iteración 8 & 60 horas \\
+  05/12/2016 - 18/12/2016 & Iteración 9 & 60 horas \\
+
+  \hline 19/12/2016 & Hito 5 & Entregables: Estado explícito y programación orientada a objetos \\ \hline
+
+  19/12/2016 - 01/01/2017 & Iteración 10 & 60 horas \\
+  02/01/2017 - 15/01/2017 & Iteración 11 & 60 horas \\
+
+  \hline 16/01/2017 & Hito 6 & Entregables: Concurrencia de estado compartido \\ \hline
+
+  16/01/2017 - 29/01/2017 & Iteración 12 & 60 horas \\
+  30/01/2017 - 12/02/2017 & Iteración 13 & 60 horas \\
+
+  \hline 13/02/2017 & Hito 7 & Entregables: Programación relacional, programación de restricciones \\ \hline
+
+  13/02/2017 - 19/02/2017 & Iteración 14 & 30 horas \\
+
+  \hline 19/02/2017 & Hito 8 & Cierre de proyecto \\ \hline
+
+  \textbf{Total de horas} & & 810 horas
+\end{longtable}
 
 %-----------------------------------------------------------------------
 % Curriculum
