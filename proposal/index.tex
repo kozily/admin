@@ -399,6 +399,56 @@ del sistema son las siguientes.
 %-----------------------------------------------------------------------
 \section{Metodología}
 
+Se adoptará une metodología iterativa basada en Kanban y adaptada al desarrollo
+de software, en conjunto con una planificación de alto nivel de hitos
+intermedios a cumplir cada mes.
+
+Todas las tareas se detallarán como issues en GitHub utilizando un template de
+User Story y se visualizarán como un Kanban Board a través de Waffle. El Kanban
+board tendrá los siguientes estados:
+
+\begin{description}
+
+  \item[Backlog] Contiene todas las tareas que aún no se han desarrollado. Las
+    tareas en este estado estarán priorizadas de acuerdo a los entregables de
+    los siguientes hitos y no serán asignadas a priori a ninguno de los
+    miembros del equipo.
+
+  \item[Ready] Contiene todas las tareas del próximo hito.
+
+  \item[In Progress] Contiene todas las tareas que están en desarrollo. Estas
+    están asignadas a un miembro del equipo obligatoriamente, responsable de
+    hacer el seguimiento hasta que esté lista.
+
+  \item[Done] Contiene todas las tareas que fueron completadas. Para que una
+    tarea esté en este estado debe estar integrada al master.
+
+\end{description}
+
+Cada tarea será tomada por un miembro del equipo del estado de \textit{Ready},
+será asignada al miembro que corresponda será puesta en \textit{In Progress}.
+Una vez que el desarrollador considera que la misma está lista, habiendo
+implementado los cambios necesarios y los tests automatizados que verifiquen la
+implementación, sube los cambios a un branch propio para la funcionalidad en
+GitHub y crea un pedido de integración. El sistema de integración continua toma
+los cambios del branch y ejecuta todos los tests, adjuntando al pedido de
+integración el informe de pruebas. Con toda esta información, otro miembro del
+equipo revisa el pedido, realiza los comentarios pertinentes y una vez que está
+satisfecho con los cambios integra los cambios al master. En este punto, el
+sistema de integración continua ejecuta nuevamente las pruebas y realiza la
+implantación en el ambiente productivo de forma automática. Una vez que los
+cambios están disponibles en el ambiente productivo, el desarrollador
+transiciona la tarea al estado \textit{Done}.
+
+Una vez por semana, los días domingo o lunes se realizará una reunión de estado
+dentro el equipo similar a la reunión de Stand Up de la metodología Scrum.
+
+Cada dos semanas se realizará una reunión para revisar el estado de las tareas
+del hito correspondiente, ajustar la planificación según corresponda y hacer
+una retrospectiva que permita revisar los parámetros y prácticas de calidad del
+proyecto. Los resultados de la reunión se sumarizarán en un informe de avance
+de proyecto que será enviado al tutor.
+
 %-----------------------------------------------------------------------
 % Cronograma
 %-----------------------------------------------------------------------
