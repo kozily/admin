@@ -1,3 +1,5 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/kozily/admin.svg?columns=all)](https://waffle.io/kozily/admin)
+
 # Kozily - Admin
 
 Kozily: Study and interact with the Oz language in a cozy development
