@@ -358,15 +358,73 @@ end
           </section>
 
           <section>
+            <h3>Paradigma funcional</h3>
+
+            <p>
+              <a href="https://facebook.github.io/immutable-js/">Immutable.js</a>
+            </p>
+
+
+            <img src="./assets/haskell.jpg">
+          </section>
+
+          <section>
             <h3>Parser</h3>
+
+            <p>
+              <a href="https://nearley.js.org/">Nearley.js</a>
+            </p>
+
+            <pre><code data-trim>
+stm_local -> "local" __ stm_local_identifier_list __ "in" __ stm_sequence __ "end" {%
+  function(d) {
+    return {
+      node: "statement",
+      type: "localSyntax",
+      identifiers: d[2],
+      statement: d[6],
+    };
+  }
+%}
+            </code></pre>
           </section>
 
           <section>
             <h3>Compiler</h3>
+            <pre><code class="javascript" data-trim>
+import { localStatement } from "../../machine/statements";
+
+export default (recurse, statement) => {
+  const childStatement = recurse(statement.get("statement"));
+  const identifiers = statement.get("identifiers");
+
+  return identifiers.reduceRight(
+    (child, identifier) => localStatement(identifier, child),
+    childStatement,
+  );
+};
+            </code></pre>
           </section>
 
           <section>
             <h3>Runtime</h3>
+
+            <pre><code class="javascript" data-trim>
+import { buildThread, buildSemanticStatement } from "../../machine/build";
+
+export default function(state, semanticStatement) {
+  const statement = semanticStatement.get("statement");
+  const environment = semanticStatement.get("environment");
+
+  const newThread = buildThread({
+    semanticStatements: [
+      buildSemanticStatement(statement.get("body"), environment),
+    ],
+  });
+
+  return state.update("threads", threads => threads.push(newThread));
+}
+            </code></pre>
           </section>
         </section>
 
@@ -383,18 +441,58 @@ end
 
           <section>
             <h3>UI Loop</h3>
+
+            <img src="./assets/ui.png" alt="">
           </section>
 
           <section>
             <h3>React</h3>
+
+            <pre><code data-trim>
+export const CodeMenu = props => {
+  return (
+    <Menu borderless size="tiny" attached="top">
+      <Menu.Item icon="list" header content="Code" />
+      <Menu.Item position="right">
+        <Button
+          icon="play"
+          content="Run"
+          disabled={!props.canRun}
+          onClick={props.onRun}
+        />
+      </Menu.Item>
+    </Menu>
+  );
+};
+            </code></pre>
           </section>
 
           <section>
             <h3>Redux</h3>
-          </section>
 
-          <section>
-            <h3>Semantic UI</h3>
+            <pre><code class="javascript" data-trim>
+// payload should be a string indication the tab
+export const onActiveTabChange = payload => {
+  return {
+    type: "CHANGE_TAB",
+    payload,
+  };
+};
+
+export const reducer = (previousState = initialState, action) => {
+  switch (action.type) {
+    case "CHANGE_TAB": {
+      return previousState.set("activeItem", action.payload);
+    }
+    case "RUNTIME_RUN": {
+      return previousState.set("activeItem", "runtime");
+    }
+    default: {
+      return previousState;
+    }
+  }
+};
+            </code></pre>
           </section>
         </section>
 
@@ -411,14 +509,26 @@ end
 
           <section>
             <h3>Webpack</h3>
+
+            <img src="./assets/webpack.png" />
           </section>
 
           <section>
             <h3>PWA</h3>
+
+            <p>
+              Offline support <a href="https://github.com/NekR/offline-plugin">con WebPack</a>
+            </p>
           </section>
 
           <section>
             <h3>Surge</h3>
+
+            <ul>
+              <li>Hosting de archivos estáticos</li>
+              <li>Cache busting</li>
+            </ul>
+
 
             <aside class="notes">
               Próxima sección Matías
