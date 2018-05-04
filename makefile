@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-all: build/proposal.pdf build/letter.pdf build/act.pdf
+all: build/proposal.pdf build/letter.pdf build/act.pdf build/report.pdf
 
 clean:
 	@echo "**************************************************"
