@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- 
+        ********************************************************************************
+        TITLE 
+        ********************************************************************************
+        -->
+        <section>
+          <h1>Kozily</h1>
+          <p>Un entorno de desarrollo y máquina virtual de Oz</p>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Quienes somos 
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Quiénes somos?</h2>
+
+          </section>
+
+          <section data-background-image="./assets/shark.jpg">
+
+          </section>
+
+          <section>
+            <h3>Andrés Arana</h3>
+            <ul>
+              <li>Full stack developer @ <a href="http://globalfishingwatch.org/">Global Fishing Watch</a></li>
+              <li>Estudiante FIUBA desde 2003</li>
+              <li>Jugador de basket</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Matías Piano</h3>
+            <ul>
+              <li>Backend developer @ <a href="http://mercadolibre.com.ar/">Mercado Libre</a></li>
+              <li>Estudiante FIUBA desde 2003</li>
+              <li>Viaja a Australia mañana</li>
+            </ul>
+
+            <aside class="notes">
+              Proxima sección arranca Andrés
+            </aside>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Historia
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>En una galaxia lejana</h2>
+
+            <aside class="notes">
+              * Queríamos hacer un tp profesional que deje algo en la facultad
+              * Cursamos una materia que nos interesó en la que se daba introducción a los paradigmas de programación
+            </aside>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Que problema
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Qué problemática tratamos?</h2>
+          </section>
+
+          <section>
+            <blockquote>
+              <p>&ldquo;Aprender a programar es difícil&rdquo;</p>
+            </blockquote>
+            <em>- Todo estudiante de informática</em>
+          </section>
+
+          <section>
+            <h3>Causas</h3>
+
+            <ul>
+              <li>Complejidad innata</li>
+              <li>Diversidad de lenguajes y paradigmas</li>
+              <li>Diversidad de entornos y plataformas</li>
+              <li>Tooling</li>
+            </ul>
+
+            <img src="./assets/free-pascal.png" />
+          </section>
+
+          <section data-background-video="./assets/monkey-computer.mp4">
+
+            <aside class="notes">
+              Próxima arranca mati.
+            </aside>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Oz
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>Oz</h2>
+
+            <ul>
+              <li>Lenguaje multiparadigma</li>
+              <li>Plataforma de ejecución explícita</li>
+              <li>Kernel con semántica operacional simple</li>
+              <li>Concurrencia nativa</li>
+            </ul>
+
+            <pre><code class="oz" data-trim>
+local Map in
+  fun {Map L F}
+    case L of H|T then {F H}|{Map T F}
+    else nil
+    end
+  end
+
+  {Map [1 2 3] fun {$ X} X * 2 end}
+end
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Multiparadigma</h3>
+
+            <ul>
+              <li>Programación procedural declarativa</li>
+              <li>Programación funcional</li>
+              <li>ADT's con estado</li>
+              <li>Objetos</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Modelo de ejecución</h3>
+
+            <ul>
+              <li>Execution stacks</li>
+              <li>Immutable store</li>
+              <li>Mutable store</li>
+              <li>Trigger store</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Kernel</h3>
+
+            <img src="./assets/oz-kernel.png" />
+          </section>
+
+          <section>
+            <h3>Concurrencia nativa</h3>
+
+            <pre><code class="oz" data-trim>
+local ProcessData S P in
+  P = {NewPort S}
+  
+  thread
+    {Send P 10}
+  end
+  
+  thread
+    case S 
+    of H|T then
+      {ProcessData H}
+    end
+  end
+end
+            </code></pre>
+          </section>
+
+          <section>
+            <ul>
+              <li>Complejidad innata</li>
+              <li>Diversidad de lenguajes y paradigmas &#x2714;</li>
+              <li>Diversidad de entornos y plataformas &#x2714;</li>
+              <li>Tooling</li>
+            </ul>
+          </section>
+
+          <section data-background-image="./assets/monkey-happy.jpeg">
+
+          </section>
+
+          <section>
+            <h3>Mozart</h3>
+
+            <p>IDE y entorno de ejecución de Oz</p>
+
+              <img class="fragment" src="./assets/mozart-error-2.png" />
+              <img class="fragment" src="./assets/mozart-shortcuts.png" />
+
+              <aside class="notes">
+                Proxima slide arranca Andres
+              </aside>
+          </section>
+
+        </section>
+
+
+        <!-- 
+        ********************************************************************************
+        DEMO
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>Kozily</h2>
+
+            <ul>
+              <li>Sin instalación</li>
+              <li>Simple de usar</li>
+              <li>Modelo de ejecución interactivo</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>DEMO</h1>
+
+            <aside class="notes">
+              Acordarse de mostrar que estamos offline
+            </aside>
+          </section>
+
+          <section data-background-image="./assets/ohhhh.gif">
+
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Procesos - Metodología
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Cómo lo hicimos?</h2>
+            <p>Metodología</p>
+          </section>
+
+          <section>
+            <h3>Kanban</h3>
+          </section>
+
+          <section>
+            <h3>Waffle</h3>
+          </section>
+
+          <section>
+            <h3>Slack</h3>
+          </section>
+        </section>
+        <!-- 
+        ********************************************************************************
+        Procesos - Metodología
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Cómo lo hicimos?</h2>
+            <p>Continuous delivery</p>
+          </section>
+
+          <section>
+            <h3>BDD</h3>
+          </section>
+
+          <section>
+            <h3>GitHub</h3>
+          </section>
+
+          <section>
+            <h3>Travis</h3>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Tecnico - Modelo
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Cómo lo hicimos?</h2>
+            <p>Modelado</p>
+          </section>
+
+          <section>
+            <h3>El proceso de compilación</h3>
+
+            <img src="./assets/compilation.png">
+          </section>
+
+          <section>
+            <h3>Parser</h3>
+          </section>
+
+          <section>
+            <h3>Compiler</h3>
+          </section>
+
+          <section>
+            <h3>Runtime</h3>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Tecnico - UI
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Cómo lo hicimos?</h2>
+            <p>Interfaz de Usuario</p>
+          </section>
+
+          <section>
+            <h3>UI Loop</h3>
+          </section>
+
+          <section>
+            <h3>React</h3>
+          </section>
+
+          <section>
+            <h3>Redux</h3>
+          </section>
+
+          <section>
+            <h3>Semantic UI</h3>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Tecnico - Plataforma
+        ********************************************************************************
+        -->
+        <section>
+          <section>
+            <h2>¿Cómo lo hicimos?</h2>
+            <p>Plataforma</p>
+          </section>
+
+          <section>
+            <h3>Webpack</h3>
+          </section>
+
+          <section>
+            <h3>PWA</h3>
+          </section>
+
+          <section>
+            <h3>Surge</h3>
+          </section>
+
+          <section>
+            <h3>Docker</h3>
+          </section>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Proximos pasos
+        ********************************************************************************
+        -->
+        <section>
+          <h2>Proximos pasos</h2>
+
+          <h3>Licencia MIT</h3>
+
+          <ul>
+            <li>Lo que quedó afuera</li>
+            <li>WebAssembly</li>
+            <li>Hub para el estudiante</li>
+          </ul>
+        </section>
+
+        <!-- 
+        ********************************************************************************
+        Proximos pasos
+        ********************************************************************************
+        -->
+        <section>
+          <h2>Preguntas</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
