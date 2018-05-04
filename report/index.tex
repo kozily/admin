@@ -106,7 +106,7 @@
 
         Wachenchauzer, Rosa
         
-        Ferrigo, Leandro
+        Ferrigno, Leandro
       \end{flushright}
     \end{minipage}
   \end{bottompar}
@@ -146,27 +146,27 @@ Estudiante de la carrera de Ingeniería en Informática, con 15 años de experie
 
 \subsection{Piano, Matías}
 
-Estudiante de la carrera de Ingeniería en informática. Experiencia de 10 años en sistemas desempeñado en distintas companías entre ellas, novamens, teracode, bvision, mercadolibre. Formado como desarrollador de distintos lenguajes enfocado en el lado del backend.
+Estudiante de la carrera de Ingeniería en informática. Experiencia de 10 años en sistemas desempeñado en distintas compañías entre ellas, Novamens, TeraCode, BVision, Mercado Libre. Formado como desarrollador de distintos lenguajes enfocado en el lado del backend.
 
 
 \section{Introducción}
 
 \subsection{Oz}
 
-Oz es un lenguaje multiparadigma diseñado por Gert Smolka en la Université Catholique de Louvain en 1991, especícamente pensado para enseñar conceptos de programación a alumnos universitarios. Fue desarrollado posteriormente en 1996 por Peter Van-Roy y Seif Haridi de
+Oz es un lenguaje multiparadigma diseñado por Gert Smolka en la Université Catholique de Louvain en 1991, especialmente pensado para enseñar conceptos de programación a alumnos universitarios. Fue desarrollado posteriormente en 1996 por Peter Van-Roy y Seif Haridi de
 Swedish Institute of Computer Science en conjunto con un manual de estudio canónico: Concepts,Techniques and Models of Computer Programming \cite{ctmcp}.
 
-El libro formaliza el lenguaje y su operación definiendo un modelo explícito de ejecución conocido como máquina abstracta, junto con una semántica operacional detallada de un subconjunto de todas las operaciones del lenguaje conocido como kernel. Por último, se definen tranformaciones simples para convertir cualquier instrucción del lenguaje a este subconjunto operacional.
+El libro formaliza el lenguaje y su operación definiendo un modelo explícito de ejecución conocido como máquina abstracta, junto con una semántica operacional detallada de un subconjunto de todas las operaciones del lenguaje conocido como kernel. Por último, se definen transformaciones simples para convertir cualquier instrucción del lenguaje a este subconjunto operacional.
 
-Utilizando estas técnicas, el manual detalla cómo soporta Oz diferentes paradigmas de programación, como son la programación funcional declarativa, la lógica procedural, manejo de estado y objetos. De esta forma se expone al lector a una miriada de técnicas y estilos.
+Utilizando estas técnicas, el manual detalla cómo soporta Oz diferentes paradigmas de programación, como son la programación funcional declarativa, la lógica procedural, manejo de estado y objetos. De esta forma se expone al lector a una miríada de técnicas y estilos.
 
 \subsection{Lenguaje kernel}
 
-El lenguaje kernel, en el contexto de Oz, se refiere a un subconjunto pequeño y controlado de instrucciones con una semántica operacional definida. De esta forma se separan los conceptos fundamentales del lenguaje de las abstracciones y conveniencias sintácticas que un lenguaje práctivo debe proveer. Es posible definir entonces un modelo de ejecución simple que trabaja con estos conceptos fundamentales, y un conjunto de transofrmaciones para entender cómo las abstracciones son traducidas a esta plataforma.
+El lenguaje kernel, en el contexto de Oz, se refiere a un subconjunto pequeño y controlado de instrucciones con una semántica operacional definida. De esta forma se separan los conceptos fundamentales del lenguaje de las abstracciones y conveniencias sintácticas que un lenguaje práctico debe proveer. Es posible definir entonces un modelo de ejecución simple que trabaja con estos conceptos fundamentales, y un conjunto de transformaciones para entender cómo las abstracciones son traducidas a esta plataforma.
 
 Debido a que el kernel es más cercano al modelo de ejecución constituye un lenguaje de bajo nivel. Si bien es posible escribir programas completos utilizando sólo este subconjunto de instrucciones, estos serían más extensos y difíciles de comprender debido a la simplicidad del mismo. El lenguaje completo es más poderoso; una sentencia del lenguaje de alto nivel va a significar un conjunto de sentencias del lenguaje de bajo nivel.
 
-En el siguiente ejemplo construímos un programa simple que realiza una operación matemática sobre dos identifiadores. Primero codificamos la solución utilizando el lenguaje completo:
+En el siguiente ejemplo construímos un programa simple que realiza una operación matemática sobre dos identificadores. Primero codificamos la solución utilizando el lenguaje completo:
 
 \begin{lstlisting}[language=oz]
 local X in
@@ -201,9 +201,9 @@ Todos los modelos de computación tienen su lugar. No es cierto que modelos con 
 
 Cada modelo computacional fue originalmente diseñado para ser usado aisladamente. Probablemente más adelante sea una locura utilizar un conjunto de ellos en el mismo programa. Encontramos que esto no sucede en todos los casos. Esto es porque los modelos no son solo bloques monolíticos con nada en común. Por el contrario tienen muchas cosas en común.
 Gracias a ello es fácil utilizar varios modelos juntos.
-Aunque es técnicamente posible, porque alguien querría utilizar varios modelos en el mismo programa? La respuesta profunda a una pregunta simple. Porque uno no programa con modelos, pero si con conceptos de programación y como elige para combinarlos. Dependiendo de los conceptos que son usados, es posible considerar que uno programa con un modelo en particular. El modelo aparece como un tipo de fenómeno. Cosas precisas se convierten en fáciles y otras cosas aumentan su complejidad y pensar en el programa está solucionando a través de una manera particular. Es practicamente más natural para un programa bien escrito que utilice diversos modelos. En éste punto la respuesta parecería ser encriptada.
+Aunque es técnicamente posible, porque alguien querría utilizar varios modelos en el mismo programa? La respuesta profunda a una pregunta simple. Porque uno no programa con modelos, pero si con conceptos de programación y como elige para combinarlos. Dependiendo de los conceptos que son usados, es posible considerar que uno programa con un modelo en particular. El modelo aparece como un tipo de fenómeno. Cosas precisas se convierten en fáciles y otras cosas aumentan su complejidad y pensar en el programa está solucionando a través de una manera particular. Es prácticamente más natural para un programa bien escrito que utilice diversos modelos. En éste punto la respuesta parecería ser encriptada.
 
-Un principio importante es que los conceptos asociados tradicionalmente con un modelo pueden ser usados con un gran efecto en más modelos generales. Por ejemplo, los conceptos de alcance lexicográfico y high-order programming los cuales están asociados a la programación funcional, son útiles en todos los modelos. Esto es bien cononcido por la comunidad de programadores funcionales. Los lenguajes funcionales fueron extendidos con estado explícito.
+Un principio importante es que los conceptos asociados tradicionalmente con un modelo pueden ser usados con un gran efecto en más modelos generales. Por ejemplo, los conceptos de alcance lexicográfico y high-order programming los cuales están asociados a la programación funcional, son útiles en todos los modelos. Esto es bien conocido por la comunidad de programadores funcionales. Los lenguajes funcionales fueron extendidos con estado explícito.
 
 
 \subsection{Mozart}
@@ -212,7 +212,7 @@ Mozart es un proyecto de comunidad que comenzó con una junta de miembros select
 
 En el proyecto de Mozart se publicaron papers con las especificaciones del lenguaje, así como una implementación de referencia denominada de la misma forma que la comunidad: Mozart. En adelante, cuando se haga una referencia a Mozart se estará refiriendo a la implementación y no al proyecto.
 
-El sistema Mozart tiene una interface interactiva que está basada en el editor de texto de Emacs. La interface es llamada OPI, que hace referencia a Oz Programming Interface. Esta OPI está dividida entre varios memorias, un anotador, un emulador de Oz y un compilador de Oz y mantiene un buffer por cada archivo abierto. Dicha interface da acceso a distíntas herramnientas, compilador incremental (que pude compilar casi cualquier fragmento de porgrama legal), Browser (visualizador de memoria de asignación simple), Panel (uso de recursos), Panel de compilador (configuraciones del comilador y entorno) Panel de distribución (subsistema de distribución incluyendo el tráfico de mensajes) y el Explorador (resolución gráfica interactiva de problemas)
+El sistema Mozart tiene una interfase interactiva que está basada en el editor de texto de Emacs. La interfase es llamada OPI, que hace referencia a Oz Programming Interface. Esta OPI está dividida entre varios memorias, un anotador, un emulador de Oz y un compilador de Oz y mantiene un buffer por cada archivo abierto. Dicha interfase da acceso a distintas herramientas, compilador incremental (que pude compilar casi cualquier fragmento de programa legal), Browser (visualizador de memoria de asignación simple), Panel (uso de recursos), Panel de compilador (configuraciones del compilador y entorno) Panel de distribución (subsistema de distribución incluyendo el tráfico de mensajes) y el Explorador (resolución gráfica interactiva de problemas)
 
 %-----------------------------------------------------------------------
 % Descripcion del problema
@@ -231,13 +231,13 @@ En esta sección describimos las limitaciones de estos dos sistemas utilizados.
 
 Para poder tener Mozart, es necesario instalar la aplicación. Existen unos fuentes de instalación del programa que quedaron deprecados desde el 2015, servidos en Sourceforge. Sin embargo, de no encontrarse el instalador para el OS que usamos es necesario hacer build de los sources del proyecto para conseguir a Mozart.
 
-Con motivo de describir en que consiste hacer el build de los sources del poryecto, indicamos que para poder utilizar Mozart, necesitamos acceder al repositorio \url{https://github.com/mozart/mozart2#downloads}, en dónde detalla que el estado de la versión 2. Se menciona que la versión 2 está actualmente en calidad alfa y que no está disponible para producción, pero puede ser usada para experimentar, testear y claramente para contribuir en el desarrollo.
+Con motivo de describir en que consiste hacer el build de los sources del proyecto, indicamos que para poder utilizar Mozart, necesitamos acceder al repositorio \url{https://github.com/mozart/mozart2#downloads}, en dónde detalla que el estado de la versión 2. Se menciona que la versión 2 está actualmente en calidad alfa y que no está disponible para producción, pero puede ser usada para experimentar, testear y claramente para contribuir en el desarrollo.
 
-Quienes instalen por primera vez Mozart, se van a encontrar con una dependencia con el editor de texto Emacs. Es necesario tener Emacs para poder usar Mozart. Sin Emacs Mozart no funciona. Ésta aplicación se monta sobre Emacs y permite dar una interface para poder desarrollar.
+Quienes instalen por primera vez Mozart, se van a encontrar con una dependencia con el editor de texto Emacs. Es necesario tener Emacs para poder usar Mozart. Sin Emacs Mozart no funciona. Ésta aplicación se monta sobre Emacs y permite dar una interfase para poder desarrollar.
 
 \subsubsection{Operación del entorno}
 
-La interface de comandos para poder operar con Mozart es a través de combinaciones de teclas, lo que hace difícil su uso.
+La interfase de comandos para poder operar con Mozart es a través de combinaciones de teclas, lo que hace difícil su uso.
 
 \includegraphics[scale=0.8]{assets/mozart_shortcuts.png}\\[1cm]
 
@@ -248,13 +248,13 @@ Acá va una muestra de como es Mozart.
 
 \subsubsection{Manejo de errores}
 
-Cuando se presenta un error del lado de Mozart es un arte tratar de entender que significa. Se hace aún más dificil cuando el código que ingresamos es más extenso.
+Cuando se presenta un error del lado de Mozart es un arte tratar de entender que significa. Se hace aún más difícil cuando el código que ingresamos es más extenso.
 
 \includegraphics[scale=0.8]{assets/mozart_errors.png}\\[1cm]
 
 \subsection{Visualización del modelo de ejecución}
 
-Los profesores llevan la guía de ejercicios y proponen realizar un ejercicio para que el alumno aprenda como se trabaja con el lenguaje Oz. Con el objetivo de poder mostrar de manera gráfica como funciona la máquina abstracta y como interactuan con los stacks, como se ejecutan los semantic statements y como se maneja los entornos y las memorias, utilizan herramientas como el excel o algún editor de planillas de cálculo.
+Los profesores llevan la guía de ejercicios y proponen realizar un ejercicio para que el alumno aprenda como se trabaja con el lenguaje Oz. Con el objetivo de poder mostrar de manera gráfica como funciona la máquina abstracta y como interactúan con los stacks, como se ejecutan los semantic statements y como se maneja los entornos y las memorias, utilizan herramientas como el excel o algún editor de planillas de cálculo.
 
 Si tomamos un ejemplo de los brindado en las clases, que tiene como finalidad indicar como se escribe el código en lenguaje Oz y poder ver como maneja la máquina abstracta, se puede ver más rápido el detalle de los problemas.
 Para comenzar vamos a calcular la potencia a la cuarta de 3:
@@ -294,28 +294,28 @@ Con el ejercicio que les mostramos, el problema al que hacemos referencia es la 
 \section{Propuesta de Solución}
 
 Nuestra idea fue armar una herramienta que permita dar soluciones a los problemas que presentamos en la sección anterior.
-A través de los años, fuimos juntando experiencia con diversos lenguajes de programación, aprenderlos dentro o fuera de la facultad, nos fueron formando. De iterados momentos en que interactuamos con entornos de desarrollo dinstintos, consideramos que los problemas que presenta el entorno de desarrollo podían ser mejorados. Decidimos empezar con la construcción de una interfaz que cumpla con los estándares y que tenga valor agregado atacando los problemas que fuimos mencionamos.
+A través de los años, fuimos juntando experiencia con diversos lenguajes de programación, aprenderlos dentro o fuera de la facultad, nos fueron formando. De iterados momentos en que interactuamos con entornos de desarrollo distintos, consideramos que los problemas que presenta el entorno de desarrollo podían ser mejorados. Decidimos empezar con la construcción de una interfaz que cumpla con los estándares y que tenga valor agregado atacando los problemas que fuimos mencionamos.
 
 De esta experiencia surgió Kozily, un sistema integrado de desarrollo y máquina virtual de ejecución para el lenguaje Oz y su máquina abstracta.
 
 Se propone que el sistema sea online, accesible con un browser a través de internet, de forma que no sea necesario instalar ni configurar el sistema del alumno para poder empezar a interactuar con la plataforma. De esta forma se permite además que el sistema sea utilizado en celulares, tablets y computadoras tradicionales.
 
-Es de importancia fundamental que la herramienta sea fácil de usar, con una interface clara y simple. Debe además permitir además interactura con la máquina abstracta subyacente de manera de acceder a los detalles de la ejecución de cada instrucción, el estado de la máquina abstracta y toda la información que los profesores y alumnos necesitan para comprender el modelo de ejecución del lenguaje.
+Es de importancia fundamental que la herramienta sea fácil de usar, con una interfase clara y simple. Debe además permitir interactuar con la máquina abstracta subyacente de manera de acceder a los detalles de la ejecución de cada instrucción, el estado de la máquina abstracta y toda la información que los profesores y alumnos necesitan para comprender el modelo de ejecución del lenguaje.
 
-Por último, el sistema utilizará técnicas de mejoramiento progresivo, o PWA por sus siglas en inglés, de manera de soportar muchas de las características de un sistema de escritorio tradiciona como son el acceso al sistema sin tener conexión a internetl
+Por último, el sistema utilizará técnicas de mejoramiento progresivo, o PWA por sus siglas en inglés, de manera de soportar muchas de las características de un sistema de escritorio tradición como son el acceso al sistema sin tener conexión a internet
 
 \subsection{Alcance}
 
 El sistema deberá soportar lo siguiente:
 
 \begin{itemize}
-    \item Soporte de la sintáxis y semántica del lenguaje Oz como es definido en los capítulos 2, 3, 4, 5 y 6 del manual.
+    \item Soporte de la sintaxis y semántica del lenguaje Oz como es definido en los capítulos 2, 3, 4, 5 y 6 del manual.
     \item Visualización del lenguaje kernel.
     \item Visualización de la máquina abstracta.
     \item Detección de errores de compilación.
     \item Detección de errores de ejecución.
     \item Control sobre el flujo de datos
-    \item Soporte de builtins básicos
+    \item Soporte de operaciones built-in básicos
     \item Procedimientos especiales, \texttt{ByNeed}, \texttt{Wait}, \texttt{NewCell}, etc. 
 \end{itemize}
 
@@ -342,7 +342,7 @@ El requisito se debe a que el formalismo de la ejecución de expresiones en el l
 %-----------------------------------------------------------------------
 \section{Descripción de la solución}
 
-\subsection{Desafios técnicos}
+\subsection{Desafíos técnicos}
 
 El sistema presenta ciertos desafíos técnicos interesantes debido a la plataforma de ejecución: compiladores, intérpretes y entornos de desarrollo suelen ser desarrollados para ser ejecutados como binarios nativos. Si bien existen ejemplos de compiladores e entornos de desarrollo online como repl.it\cite{replit} o Codeanywhere\cite{codeanywhere}, estos no son tan comunes y por lo tanto no existe un ecosistema tan desarrollado de librerías y herramientas para construir este tipo de aplicaciones.
 
@@ -350,7 +350,7 @@ Por otro lado, la necesidad de interacción entre el usuario y la máquina abstr
 
 \subsection{Arquitectura}
 
-El sistema es una aplicación web autocontenida progresiva, o PWA por sus siglas en inglés. La totalidad de la aplicación, compuesta por un archivo html, un script javascript, un paquete de estilos y los diferentes assets de presentación es descargada en una primer interacción con un servidor de archivos estático. El browser interpreta el archivo HTML que sólo contiene un esqueleto de la presentación, para luego ejecutar el script javascript de la aplicación. Este script inicializa la interfaz de usuario y configura los callbacks de los diferentes eventos que suceden en la aplicación.
+El sistema es una aplicación web auto contenida progresiva, o PWA por sus siglas en inglés. La totalidad de la aplicación, compuesta por un archivo html, un script javascript, un paquete de estilos y los diferentes assets de presentación es descargada en una primer interacción con un servidor de archivos estático. El browser interpreta el archivo HTML que sólo contiene un esqueleto de la presentación, para luego ejecutar el script javascript de la aplicación. Este script inicializa la interfaz de usuario y configura los callbacks de los diferentes eventos que suceden en la aplicación.
 
 El proceso de compilación es un pipeline en donde cada etapa sólo dependen de la salida de la etapa anterior: 
 
@@ -387,7 +387,7 @@ Cabe destacar que este proceso es una función pura desde el punto de vista de l
 
 \subsection{Compilación}
 
-El compilador convierte el AST en un árbol que representa un conjunto de instrucciones kernel. Nuevamente, este proceso es modelado como una función pura: dado que tanto el AST origianl como el kernel son estructuras de datos persistente\cite{persistentdatastructures}, la nueva estructura de datos derivada no modifica el AST original, y sólo depende de la estructura de datos original. Este algoritmo es recursivo: dada la naturaleza del AST cada nodo debe compilar cualquier subnodo que este contenga.
+El compilador convierte el AST en un árbol que representa un conjunto de instrucciones kernel. Nuevamente, este proceso es modelado como una función pura: dado que tanto el AST original como el kernel son estructuras de datos persistente\cite{persistentdatastructures}, la nueva estructura de datos derivada no modifica el AST original, y sólo depende de la estructura de datos original. Este algoritmo es recursivo: dada la naturaleza del AST cada nodo debe compilar cualquier subnodo que este contenga.
 
 El modelo de datos del kernel es simple: cada nodo de kernel contiene toda la información del nodo de manera que puede ser procesado de manera independiente. El siguiente ejemplo muestra la estructura de datos para una instrucción de declaración de variables, y el proceso de compilación asociado:
 
@@ -416,7 +416,7 @@ export default (recurse, statement) => {
 
 La estructura de datos kernel es posteriormente utilizada en otra estructura de datos que representa un estado inicial de ejecución. Cada estado de ejecución tienen una lista de threads, que inicialmente contiene un único thread con el único statement de kernel resultante del proceso anterior.
 
-Avanzar un paso en la ejecución implica tomar el statement siguiente de uno de los threas y realizar una operación de reducción funcional\cite{fold}: dado el estado actual y el statement actual, devuelve el siguiente estado. Aquí nuevamente es importante remarcar la importancia de las estructuras de datos persistentes; el nuevo estado es una derivación del estado anterior y no una modificación in-situ. Esto permite navegar temporalmente la ejecución sin necesidad de implementar un algoritmo de undo-redo.
+Avanzar un paso en la ejecución implica tomar el statement siguiente de uno de los threads y realizar una operación de reducción funcional\cite{fold}: dado el estado actual y el statement actual, devuelve el siguiente estado. Aquí nuevamente es importante remarcar la importancia de las estructuras de datos persistentes; el nuevo estado es una derivación del estado anterior y no una modificación in-situ. Esto permite navegar temporalmente la ejecución sin necesidad de implementar un algoritmo de undo-redo.
 
 El siguiente ejemplo muestra el reductor para la instrucción de creación de variables:
 
@@ -455,7 +455,7 @@ export default function(state, semanticStatement, activeThreadIndex) {
 
 \subsection{Interfaz de usuario}
 
-Para construir la interfaz que le permite al usuario interactuar con los estados de la máquina abstracta utilizamos React.js\cite{react}. Esta librería permite construir interfaces declarativas utilizando el paradigma de programación funcional: cada componente es una función pura que, dado ciertas propiedades derivadas del estado de la aplicación construye una representación de la vista para ese estado. La librería luego reconcilia esta representación con el estado actual de la interface.
+Para construir la interfaz que le permite al usuario interactuar con los estados de la máquina abstracta utilizamos React.js\cite{react}. Esta librería permite construir interfaces declarativas utilizando el paradigma de programación funcional: cada componente es una función pura que, dado ciertas propiedades derivadas del estado de la aplicación construye una representación de la vista para ese estado. La librería luego reconcilia esta representación con el estado actual de la interfase.
 
 El siguiente es un ejemplo de un componente de la UI, en particular la barra de navegación:
 
@@ -487,7 +487,7 @@ export const NavBar = props => {
 };
 \end{lstlisting}
 
-El estado general de la aplicación, como es el código fuente actual, el paso de ejecución o la sección de la aplicación que se está mostrando en un momento dado se representa utilizando estructuras de datos persistentes y Redux.js\cite{redux}. Nuevamente esta librería representa las transiciones entre los estados, que se dan cuando el usuario genera eventos semánticos en la aplicación, con el patrón de reducción funcional: cada reductor toma el estado actual de la aplicación y un evento semántico y genera un nuevo event semántico.
+El estado general de la aplicación, como es el código fuente actual, el paso de ejecución o la sección de la aplicación que se está mostrando en un momento dado se representa utilizando estructuras de datos persistentes y Redux.js\cite{redux}. Nuevamente esta librería representa las transiciones entre los estados, que se dan cuando el usuario genera eventos semánticos en la aplicación, con el patrón de reducción funcional: cada reductor toma el estado actual de la aplicación y un evento semántico y genera un nuevo evento semántico.
 
 El siguiente es un ejemplo de un reductor de redux que maneja la pantalla actual:
 
@@ -511,7 +511,7 @@ El resultado final es una interfaz fluida e interactiva como al que sigue:
 
 \includegraphics[scale=0.5]{assets/kozily_code_example.png}\\[1cm]
 
-En la imagen podemos ver que tenemos en la sección de la izquierda el editor, donde el programador ingresa su código. Al margen derecho se vé el lenguaje Kernel que es el resultado de la compilación del código ingresado.
+En la imagen podemos ver que tenemos en la sección de la izquierda el editor, donde el programador ingresa su código. Al margen derecho se ve el lenguaje Kernel que es el resultado de la compilación del código ingresado.
 
 En la parte superior hay dos tabs que separan la parte del código y de la parte de ejecución.
 
@@ -525,12 +525,12 @@ Una vez que se ejecuta, se habilita la tab de runtime y lleva al programador a e
 
 En el sector del runtime tenemos los controles de ejecución del programa en la parte superior y un menú desplegable. Entre los controles de ejecución del programa se encuentran el ir al comienzo de la ejecución e ir al paso anterior dejando el estado de la máquina abstracta como estaba en ese momento. En el menu desplegable podemos habilitar/deshabilitar las variables de sistema ocultas tanto en el entorno como en la memoria sigma.
 
-En la sección intermedia se encuentran los multiples threads, indicando una columna para los que están listos para ser ejecutados y los que quedan bloqueados por la necesidad de conocer una variable que aún no fue bounded. Aquellos threads que quedaron bloqueados se indican en color rojo y no pueden seguir la ejecución hasta que la variable en cuestión se encuentre bounded.
+En la sección intermedia se encuentran los múltiples threads, indicando una columna para los que están listos para ser ejecutados y los que quedan bloqueados por la necesidad de conocer una variable que aún no fue bounded. Aquellos threads que quedaron bloqueados se indican en color rojo y no pueden seguir la ejecución hasta que la variable en cuestión se encuentre bounded.
 Los threads que se encuentran en el sector de Ready, se encuentran listos para ser ejecutados.
 Un dato adicional y no menor es que el desarrollador puede elegir cual de los threads debe continuar con la ejecución con ánimos de indicar que es lo que hace en cada paso.
 Sobre cada una de las sentencias, que están representadas por los cuadrados dentro del componente del thread, si pasamos con el mouse podemos ver la sentencia que se quiere ejecutar en más detalle en un menú desplegable que permite mostrarlo.
 
-En la parte inferior de la pantalla de runtime se encuentran las memorias. La primera memoria es sigma que es la memoria immutable. La segunda memoria es tau que contiene los triggers. Y por último la memoria mu que es dónde se encuentran los elementos mutables. Cada una de ellas tiene una tabla con las varaibles que maneja y que valor tiene esa variable. Si pasamos con el mouse sobre una de las variables podemos ver el contenido del valor más completo de como se está mostrando, gracias a un menú desplegable.
+En la parte inferior de la pantalla de runtime se encuentran las memorias. La primera memoria es sigma que es la memoria Immutable. La segunda memoria es tau que contiene los triggers. Y por último la memoria mu que es dónde se encuentran los elementos mutables. Cada una de ellas tiene una tabla con las variables que maneja y que valor tiene esa variable. Si pasamos con el mouse sobre una de las variables podemos ver el contenido del valor más completo de como se está mostrando, gracias a un menú desplegable.
 
 \subsection{Plataforma}
 
@@ -599,7 +599,7 @@ Los beneficios son:
 \begin{enumerate}
   \item Estímulo del rendimiento. Análisis profundo y estimaciones que permiten medir su rendimiento. Detección de cualquier problema existente y ajuste del flujo de trabajo para ganar en eficiencia. El método Kanban es muy flexible y le permite perfeccionar sus procesos para obtener los mejores resultados.
 
-  \item Organización y colaboración. La metodologia Kanban le permite beneficiarse del poder del enfoque visual, mediante el uso de columnas, carriles y tarjetas de colores. Usted será capaz de trabajar en el mismo tablero que su equipo y colaborar en tiempo real. Los tableros digitales Kanban le permitirán acceder a su flujo de trabajo desde cualquier sitio, compartir tareas con facilidad y comunicarse en su trabajo con sus colegas.
+  \item Organización y colaboración. La metodología Kanban le permite beneficiarse del poder del enfoque visual, mediante el uso de columnas, carriles y tarjetas de colores. Usted será capaz de trabajar en el mismo tablero que su equipo y colaborar en tiempo real. Los tableros digitales Kanban le permitirán acceder a su flujo de trabajo desde cualquier sitio, compartir tareas con facilidad y comunicarse en su trabajo con sus colegas.
 
   \item Distribución del trabajo. Una cómoda visión general de los trabajos en curso y menos tiempo dedicado a la distribución y presentación de los trabajos. Las estimaciones son imperfectas, por consiguiente, un flujo constante de tareas reducirá su tiempo de espera y el tiempo dedicado a la asignación de tareas. Usted selecciona sus tareas, por tanto no tendrá que esperar a que la tarea vaya hacia usted.
 \end{enumerate}
@@ -610,12 +610,12 @@ El método Kanban se basa en la idea de visualizar lo que se está haciendo ahor
 
 \subsubsection{Estado de las tareas}
 
-Para realizar el seguimiento del proceso utilizamos un kanban board a través de Waffle.io\cite{waffle}. Esta aplicación permite visualizar los issues cargados en GitHub como tarjetas en un tablero de kanban. Definimos las siguientes columnas para el tablero:
+Para realizar el seguimiento del proceso utilizamos un Kanban board a través de Waffle.io\cite{waffle}. Esta aplicación permite visualizar los issues cargados en GitHub como tarjetas en un tablero de kanban. Definimos las siguientes columnas para el tablero:
 
 \begin{enumerate}
     \item \textbf{Backlog} Listado priorizado de todos los requisitos que se elicitaron para implementar. Nuevos requisitos se ingresan en esta lista. Las tarjetas en esta lista no están asignadas a ningún integrante.
     \item \textbf{Ready} Listado de tareas que ya tienen un análisis detallado y están listas para ser implementadas. Constituye un segundo backlog de cosas que están listas para implementar.
-    \item \textbf{In Progress} Tareas en desarrollo activo. Todas las tarjetas en esta columna están asignadas a un desarrollador. No puede haber más de una tarejeta en esta columna para cada desarrollador.
+    \item \textbf{In Progress} Tareas en desarrollo activo. Todas las tarjetas en esta columna están asignadas a un desarrollador. No puede haber más de una tarjeta en esta columna para cada desarrollador.
     \item \textbf{Review} Tareas que están pendientes para realizar el proceso de revisión cruzada. Se asignan al miembro del equipo que realizó la implementación, pero se adjunta la revisión asignada al integrante que va a revisar la misma.
     \item \textbf{Done} Una vez que se completa la revisión y se integran los cambios al master, el sistema automáticamente corre los tests y realiza el deploy al entorno productivo. Cuando este proceso automático termina, la tarjeta asociada se mueve a esta columna.
 \end{enumerate}
@@ -638,13 +638,13 @@ Cuando el código es integrado en el master, TravisCI ejecuta nuevamente las esp
 
 Se describen a continuación algunos posibles trabajos posteriores que pueden basarse en el presente trabajo para expandirlo:
 
-\subsubsection{Lenguage Oz}
+\subsubsection{Lenguaje Oz}
 
-Como se detallo en la sección de alcance, sólo se incluyeron ciertas construcciones propias del lenguaje. En un trabajo posterior podría terminar de implementarse el resto de los modelos de programación, incluyendo de esta forma construcciones propias de Object Oriented Programming, Shared-State Concurrency, Relational Programming y Distributed Programming. Este trabajo también podría incluir las construcciones de los paradigmas ya implementados que quedaron afuera, como las expressiones lógicas de conjunción y disyunción.
+Como se detallo en la sección de alcance, sólo se incluyeron ciertas construcciones propias del lenguaje. En un trabajo posterior podría terminar de implementarse el resto de los modelos de programación, incluyendo de esta forma construcciones propias de Object Oriented Programming, Shared-State Concurrency, Relational Programming y Distributed Programming. Este trabajo también podría incluir las construcciones de los paradigmas ya implementados que quedaron afuera, como las expresiones lógicas de conjunción y disyunción.
 
 \subsubsection{Compilación a otras plataformas}
 
-Debido a que el parser y compilador es indepdendiente del modelo de ejecución, es posible extender el proyecto para que incluya otras plataformas objetivo, como WebAssembly\cite{wasm}. Esto permitiría ejecutar código Oz en otros entornos: en el caso de compilar a WebAssembly esto permitiría ejecutar código Oz en browsers.
+Debido a que el parser y compilador es independiente del modelo de ejecución, es posible extender el proyecto para que incluya otras plataformas objetivo, como WebAssembly\cite{wasm}. Esto permitiría ejecutar código Oz en otros entornos: en el caso de compilar a WebAssembly esto permitiría ejecutar código Oz en browsers.
 
 
 \subsection{Licencia}
